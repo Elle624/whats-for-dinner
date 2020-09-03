@@ -7,4 +7,95 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+* {box-sizing: border-box;}
+body {
+    background-image: url('assets/burger-friends.jpg');
+    background-size: cover;
+    margin: 0px;
+}
+/* ~~~~~~~~~~~~~~~ Top ~~~~~~~~~~~~~~~~*/
+.panel {
+    display:flex;
+    background-color:#74b9ff;
+    justify-content: space-between;
+}
+.panel > button {
+    background: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 14px;
+    padding: 10px 10px;
+}
+.panel > button:hover {
+    background: #e07999;
+    color: white;
+  }
+h1 {
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+/* ~~~~~~~~~~~~~~~ Main ~~~~~~~~~~~~~~~~*/
 
+.menu {
+    display: flex;
+    justify-content: space-around;
+    opacity: 0.8;
+}
+.left-side {
+    display: flex;
+    height: 490px;
+    width: 650px;
+    margin-top: 70px;
+    background-color: aliceblue;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-top: 70px;
+    padding-left: 50px;
+    font-size: 20px;
+}
+.right-side {
+    display: flex;
+    height: 490px;
+    width: 650px;
+    margin-top: 70px;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;   
+}
+span {
+    color:red;
+}
+.list {
+    flex-direction: column;
+    margin: 0px;
+    text-align: left;
+    font-family: Roboto;
+    padding-inline-start : 10px;
+}
+.dish-type {
+    display: flex;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+button {
+    width: 200px;
+    height: 40px;
+    background: rgb(76, 150, 230);
+    margin-left: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+}
+button:hover {
+    background: #ffeaa7;
+    color: #ff7675;
+    
+  }
+#pot {  
+    height: 200px;
+    width: 200px;
+}
