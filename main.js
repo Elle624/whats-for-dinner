@@ -9,10 +9,7 @@ cookButton.addEventListener('click', showRandomDish);
 function createRandomNum(arr) {
     return Math.floor(Math.random()*arr.length);
 }
-function showRandomDish() {
-    pot.classList.toggle('hidden');
-    text.classList.toggle('hidden');
-
+function createRandomDish() {
     for (var i=0; i<userChoice.length;i++) {
         if (userChoice[i].checked && i===0) {
         recipe.innerText = `${sides[createRandomNum(sides)]}!`
@@ -20,6 +17,14 @@ function showRandomDish() {
         recipe.innerText = `${mainDishes[createRandomNum(mainDishes)]}!`
         } else if (userChoice[i].checked && i===2) {
         recipe.innerText = `${desserts[createRandomNum(desserts)]}!`
-        }; 
+        } else if (userChoice[i].checked && i===3){
+        recipe.innerText = 
+        `${sides[createRandomNum(sides)]} with a side of ${mainDishes[createRandomNum(mainDishes)]} and ${desserts[createRandomNum(desserts)]} for dessert!`
+        } 
     }
+}
+function showRandomDish() {
+    var meal = new Meal(createRandomDish())
+    pot.classList.toggle('hidden');
+    text.classList.toggle('hidden');
 } 

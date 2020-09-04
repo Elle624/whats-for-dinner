@@ -85,11 +85,6 @@ span {
     font-weight: bold;
     font-size: 25px;
 }
-.checkmark:after {
-    content: " ";
-    position: absolute;
-    display: none;
-}
 button {
     width: 200px;
     height: 40px;
@@ -103,30 +98,35 @@ button:hover {
     background: #ffeaa7;
     color: #ff7675;
     border: none;
-    border-radius: 15px;
-    
+    border-radius: 15px;  
   }
 #pot {  
     height: 200px;
     width: 200px;
 }
 p {
-    text-align: center;
     font-size: 25px;
     font-family: sans-serif;
     font-style: italic;
-    margin-top: 170px;
-   
+    margin: 0; 
+}
+.text {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 25px;
+    width: 600px;
+    height: 250px;
 }
 .recipe {
     font-family: Roboto;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
-    margin-top: 0px;
- 
+    margin-top: 20px;
+    padding: 0 40px;
 }
-.clear-button {
-    margin-left: 450px;
+.clear-button { 
+    position: fixed;
     margin-top: 70px;
     width: 80px;
     height: 25px;
@@ -134,12 +134,13 @@ p {
     color: white;
     font-size: 14px;
     border: none;
-    border-radius: 5px;
-  
+    border-radius: 5px; 
+    bottom: 300px;
+    right: 150px;
 }
 .clear-button:hover {
-        background: #ffeaa7;
-        color: #ff7675;
-        border: none;
-        border-radius: 15px;
+    background: #ffeaa7;
+    color: #ff7675;
+    border: none;
+    border-radius: 15px;
 }
