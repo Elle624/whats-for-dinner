@@ -13,6 +13,9 @@ body {
     background-size: cover;
     margin: 0px;
 }
+.hidden {
+    display: none;
+  }
 /* ~~~~~~~~~~~~~~~ Top ~~~~~~~~~~~~~~~~*/
 .panel {
     display:flex;
@@ -58,6 +61,7 @@ h1 {
 }
 .right-side {
     display: flex;
+    flex-direction: column;
     height: 490px;
     width: 650px;
     margin-top: 70px;
@@ -81,6 +85,11 @@ span {
     font-weight: bold;
     font-size: 25px;
 }
+.checkmark:after {
+    content: " ";
+    position: absolute;
+    display: none;
+}
 button {
     width: 200px;
     height: 40px;
@@ -93,9 +102,44 @@ button {
 button:hover {
     background: #ffeaa7;
     color: #ff7675;
+    border: none;
+    border-radius: 15px;
     
   }
 #pot {  
     height: 200px;
     width: 200px;
+}
+p {
+    text-align: center;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-style: italic;
+    margin-top: 170px;
+   
+}
+.recipe {
+    font-family: Roboto;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 0px;
+ 
+}
+.clear-button {
+    margin-left: 450px;
+    margin-top: 70px;
+    width: 80px;
+    height: 25px;
+    background: rgb(76, 150, 230);
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+  
+}
+.clear-button:hover {
+        background: #ffeaa7;
+        color: #ff7675;
+        border: none;
+        border-radius: 15px;
 }
