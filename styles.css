@@ -15,7 +15,11 @@ body {
 }
 .hidden {
     display: none;
-  }
+}
+/* .disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+} */
 /* ~~~~~~~~~~~~~~~ Top ~~~~~~~~~~~~~~~~*/
 .panel {
     display:flex;
