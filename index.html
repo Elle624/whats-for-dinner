@@ -6,7 +6,7 @@
   <body>
     <section class="panel">
       <h1>What's for Dinner?</h1>
-      <button>ADD A RECIPE</button>
+      <button class="add-recipe-button">ADD A RECIPE</button>
     </section>
     <section class="menu">
       <div class="left-side">
@@ -33,12 +33,21 @@
       </div>
       <div class="right-side">
         <img id="pot" src="assets/cookpot.svg">
-        <div class="text hidden">
+        <div class="view text hidden">
           <p>You should make:</p>
           <p class="recipe">place holder</p>
           <button class="clear-button">CLEAR</button>
         </div>
       </div>
+    </section>
+    <section class="view add-new-recipe hidden">
+      <form>
+        <label for="recipe-type">Recipe Type</label>
+        <input class="user-recipe-type" type="text" id="recipe-type" />
+        <label for="recipe-name">Receipe Name</label>
+        <input class="user-recipe-name" type="text" id="recipe-name">
+        <button class="add-user-recipe-button">ADD NEW</button>        
+      </form>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>

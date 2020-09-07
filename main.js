@@ -5,10 +5,17 @@ var pot = document.querySelector('#pot');
 var cookButton = document.querySelector('.cook');
 var clearButton = document.querySelector('.clear-button');
 var leftSideHtml = document.querySelector('.list');
+var userRecipeType = document.querySelector('#recipe-type');
+var userRecipeName = document.querySelector('#recipe-name');
+var addRecipeButton = document.querySelector('.add-recipe-button');
+var makeNewRecipeButton = document.querySelector('.add-user-recipe-button');
+var userFormSection = document.querySelector('.add-new-recipe');
 
 leftSideHtml.addEventListener('click', enableCookButton)
 cookButton.addEventListener('click', showRandomDish);
 clearButton.addEventListener('click', eraseRecipe);
+addRecipeButton.addEventListener('click', showUserForm);
+makeNewRecipeButton.addEventListener('click', addNewRecipe);
 
 function disableCookButton() {
     cookButton.disabled = true;
@@ -34,7 +41,7 @@ function createRandomDish() {
     }
 }
 function showRandomDish() {
-    var meal = new Meal(createRandomDish())
+    createRandomDish();
     pot.classList.toggle('hidden');
     text.classList.toggle('hidden');
 } 
@@ -42,5 +49,20 @@ function eraseRecipe() {
     text.classList.add('hidden');
     pot.classList.remove('hidden');
 }
-
+function showUserForm() {
+    userFormSection.classList.remove('hidden');
+}
+function addNewRecipe() {
+    event.preventDefault();
+    var meal = new Meal(userRecipeType.value,userRecipeName.value);
+    if (meal.dish.includes('side')) {
+        sides.push(meal.name);
+    } else if (meal.dish.includes('main')) {
+        mainDishes.push(meal.name);
+    } else if (meal.dish.includes('dessert')) {
+        desserts.push(meal.name);
+    }
+    userRecipeType.value = '';
+    userRecipeName.value = '';   
+}
 disableCookButton()

@@ -1,5 +1,6 @@
 class Meal {
-    constructor(choice) {
-        this.side = choice;
+    constructor(type,name) {
+        this.dish = type;
+        this.name = name;
     }
 }

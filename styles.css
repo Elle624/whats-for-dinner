@@ -9,6 +9,7 @@ red - #ee5253
 */
 * {box-sizing: border-box;}
 body {
+    position: relative;
     background-image: url('assets/burger-friends.jpg');
     background-size: cover;
     margin: 0px;
@@ -16,10 +17,6 @@ body {
 .hidden {
     display: none;
 }
-/* .disabled {
-    pointer-events: none;
-    cursor: not-allowed;
-} */
 /* ~~~~~~~~~~~~~~~ Top ~~~~~~~~~~~~~~~~*/
 .panel {
     display:flex;
@@ -50,6 +47,7 @@ h1 {
     justify-content: space-around;
     opacity: 0.8;
 }
+/* ~~~~~~~~~~~~~~~ Left Side ~~~~~~~~~~~~~~~~*/
 .left-side {
     display: flex;
     height: 490px;
@@ -62,16 +60,6 @@ h1 {
     padding-top: 70px;
     padding-left: 50px;
     font-size: 20px;
-}
-.right-side {
-    display: flex;
-    flex-direction: column;
-    height: 490px;
-    width: 650px;
-    margin-top: 70px;
-    background-color: aliceblue;
-    justify-content: center;
-    align-items: center;   
 }
 span {
     color:red;
@@ -104,6 +92,18 @@ button:hover {
     border: none;
     border-radius: 15px;  
   }
+/* ~~~~~~~~~~~~~~~ Right Side ~~~~~~~~~~~~~~~~*/
+.right-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 490px;
+    width: 650px;
+    margin-top: 70px;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;   
+}
 #pot {  
     height: 200px;
     width: 200px;
@@ -130,21 +130,37 @@ p {
     padding: 0 40px;
 }
 .clear-button { 
-    position: fixed;
-    margin-top: 70px;
+    position: absolute;
     width: 80px;
-    height: 25px;
-    background: rgb(76, 150, 230);
+    height: 35px;
     color: white;
     font-size: 14px;
-    border: none;
     border-radius: 5px; 
-    bottom: 300px;
-    right: 150px;
+    bottom: 20px;
+    right: 40px;
 }
 .clear-button:hover {
     background: #ffeaa7;
     color: #ff7675;
     border: none;
     border-radius: 15px;
+}
+/* ~~~~~~~~~~~~~~~ Add Recipe Form ~~~~~~~~~~~~~~~~*/
+.add-new-recipe {
+    /* position: absolute; */
+    background-color: lightgray;
+    opacity: 0.8;
+    padding: 25px 20px 10px;;
+    font-size: 25px;
+    margin-top: 200px;
+}
+form >input {
+   height: 35px;
+}
+.add-new-recipe-button {
+    width: 100px;
+}
+.add-new-recipe-button:hover {
+    background-color: #0fb9b1;
+    color: black;
 }
