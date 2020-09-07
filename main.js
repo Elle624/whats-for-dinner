@@ -55,11 +55,11 @@ function showUserForm() {
 function addNewRecipe() {
     event.preventDefault();
     var meal = new Meal(userRecipeType.value,userRecipeName.value);
-    if (meal.dish.includes('side')) {
+    if (meal.dish.includes('side') || meal.dish.includes('Side')) {
         sides.push(meal.name);
-    } else if (meal.dish.includes('main')) {
+    } else if (meal.dish.includes('main') || meal.dish.includes('Main')) {
         mainDishes.push(meal.name);
-    } else if (meal.dish.includes('dessert')) {
+    } else if (meal.dish.includes('dessert') || meal.dish.includes('Dessert')) {
         desserts.push(meal.name);
     }
     userRecipeType.value = '';
