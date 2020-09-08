@@ -17,9 +17,6 @@ clearButton.addEventListener('click', eraseRecipe);
 addRecipeButton.addEventListener('click', showUserForm);
 makeNewRecipeButton.addEventListener('click', addNewRecipe);
 
-function disableCookButton() {
-    cookButton.disabled = true;
-}
 function enableCookButton() {
     cookButton.disabled = false;
 }
@@ -54,15 +51,14 @@ function showUserForm() {
 }
 function addNewRecipe() {
     event.preventDefault();
-    var meal = new Meal(userRecipeType.value,userRecipeName.value);
-    if (meal.dish.includes('side') || meal.dish.includes('Side')) {
+    var meal = new Meal(userRecipeType.value.toLowerCase(),userRecipeName.value.toLowerCase());
+    if (meal.dish.includes('side')) {
         sides.push(meal.name);
-    } else if (meal.dish.includes('main') || meal.dish.includes('Main')) {
+    } else if (meal.dish.includes('main')) {
         mainDishes.push(meal.name);
-    } else if (meal.dish.includes('dessert') || meal.dish.includes('Dessert')) {
+    } else if (meal.dish.includes('dessert')) {
         desserts.push(meal.name);
     }
     userRecipeType.value = '';
     userRecipeName.value = '';   
 }
-disableCookButton()
